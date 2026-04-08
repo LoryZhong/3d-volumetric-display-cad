@@ -1,6 +1,6 @@
-# 3D Volumetric Display — Mechanical CAD Files
+# 3D Volumetric Display — Hardware Design Files
 
-Mechanical design files for a rotational swept-volume volumetric display based on persistence of vision (POV). All structural components were designed in SolidWorks and fabricated by FDM 3D printing (PLA, with PETG for the motor damper).
+Mechanical CAD and PCB design files for a rotational swept-volume volumetric display based on persistence of vision (POV). Structural components were designed in SolidWorks and fabricated by FDM 3D printing (PLA, with PETG for the motor damper). The custom HUB75E adapter PCB was designed in KiCad.
 
 This repository accompanies the software driver at [LoryVox](https://github.com/LoryZhong/LoryVox).
 
@@ -35,6 +35,21 @@ The non-rotating platform that houses the power supply, motor, brush holder (AS-
 ![Support Part](images/support_part.png)
 
 **Contents of `support-part/`:** Stationary base, motor mount (sliding slot), motor damper (PETG), partial enclosure panels.
+
+### PCB — Custom HUB75E Adapter Board
+
+KiCad project for the 3.3 V-to-5 V level-shifting adapter between the Raspberry Pi 4 GPIO header and two HUB75E LED panel connectors. Uses three 74HCT245 octal bus transceivers (SOIC-20) with per-IC 100 nF decoupling capacitors. Includes a JST-XH 3-pin socket for the photo-interrupter and a JST-XH 2-pin socket for DC-DC power input.
+
+**Contents of `pcb/`:** KiCad project (`.kicad_pro`, `.kicad_sch`, `.kicad_pcb`), BOM (`.csv`), schematic PDF, fabrication Gerbers (`.zip`).
+
+| PCB Parameter | Value |
+|---------------|-------|
+| Layers | 2 |
+| Substrate | FR-4, 0.8 mm |
+| Copper | 1 oz |
+| Min trace | 0.33 mm |
+| Via drill/ring | 0.4/1.1 mm |
+| Finish | HASL lead-free |
 
 ## Printing Notes
 
