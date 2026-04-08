@@ -1,0 +1,11 @@
+# SolidWorks backup/recovery files
+~$*.SLDPRT
+~$*.SLDASM
+~$*.SLDDRW
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
